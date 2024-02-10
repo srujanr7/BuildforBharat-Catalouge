@@ -1,3 +1,13 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'bfb-catalouge-app', '--image', 'gcr.io/$PROJECT_ID/streamlit-app', '--platform', 'managed', '--region', 'us-central1'] 
+  args:
+  - 'run'
+  - 'deploy'
+  - 'BfBcatalouge'
+  - '--image'
+  - 'gcr.io/$PROJECT_ID/streamlit-app'
+  - '--platform'
+  - 'managed'
+  - '--region'
+  - 'us-central1'
+  - '--allow-unauthenticated'
