@@ -1,13 +1,6 @@
-FROM python:3.7
-
-WORKDIR /app
-
-COPY requirements.txt ./requirements.txt
-
-RUN pip3 install -r requirements.txt
-
+FROM python:3.8
 EXPOSE 8080
-
-COPY . /app
-
-CMD streamlit run --server.port 8080 --server.enableCORS false app.py
+WORKDIR /app
+COPY . ./
+RUN pip install -r requirements.txt
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8080", "--server.address=0.0.0.0"]
