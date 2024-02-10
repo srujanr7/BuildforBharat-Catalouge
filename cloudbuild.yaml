@@ -9,5 +9,5 @@ steps:
   - '--platform'
   - 'managed'
   - '--region'
-  - 'us-central1'
+  - 'us-west1'
   - '--allow-unauthenticated'
